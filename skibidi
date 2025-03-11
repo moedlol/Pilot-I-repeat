@@ -33,9 +33,6 @@ HintUI.BackgroundColor3 = Color3.fromRGB(255, 102, 102) -- Light Red
 HintUI.Visible = false
 HintUI.Parent = ScreenGui
 
--- Prevent UI Reset on Respawn
-HintUI.ResetOnSpawn = false  
-
 -- UI Styling
 local UICorner = Instance.new("UICorner")
 UICorner.CornerRadius = UDim.new(0, 10)
