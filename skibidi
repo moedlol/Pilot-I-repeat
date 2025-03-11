@@ -5,6 +5,7 @@ local UIS = game:GetService("UserInputService")
 -- Create Main GUI
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false -- Prevent GUI from resetting on respawn
 
 -- Function to create buttons easily
 local function createButton(text, callback)
@@ -16,7 +17,6 @@ local function createButton(text, callback)
     button.Font = Enum.Font.GothamBold
     button.TextColor3 = Color3.fromRGB(255, 255, 255)
     button.TextSize = 18
-    button.AutoButtonColor = true
     button.Parent = ScreenGui
 
     -- Button Click Action
@@ -33,6 +33,9 @@ HintUI.BackgroundColor3 = Color3.fromRGB(255, 102, 102) -- Light Red
 HintUI.Visible = false
 HintUI.Parent = ScreenGui
 
+-- Prevent UI Reset on Respawn
+HintUI.ResetOnSpawn = false  
+
 -- UI Styling
 local UICorner = Instance.new("UICorner")
 UICorner.CornerRadius = UDim.new(0, 10)
@@ -46,7 +49,6 @@ UIStroke.Parent = HintUI
 -- Title
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, 0, 0.2, 0)
-Title.Position = UDim2.new(0, 0, 0, 0)
 Title.Text = "Custom Hint/Message"
 Title.Font = Enum.Font.GothamBold
 Title.TextSize = 20
