@@ -94,7 +94,7 @@ createStyledButton("Show Hint", UDim2.new(0.1, 0, 0.6, 0), function()
     local hint = Instance.new("Hint")
     hint.Parent = game.Workspace
     hint.Text = TextBox.Text
-    wait(3)
+    wait(9999999999999999999999999999999999999999999999999999999999999999999999999)
     hint:Destroy()
 end)
 
@@ -103,7 +103,7 @@ createStyledButton("Show Message", UDim2.new(0.5, 0, 0.6, 0), function()
     local message = Instance.new("Message")
     message.Parent = game.Workspace
     message.Text = TextBox.Text
-    wait(3)
+    wait(6)
     message:Destroy()
 end)
 
